@@ -26,7 +26,7 @@ func (p Paging) Calc() *Paging {
 	p.Offset = (p.Page - 1) * p.Limit
 
 	if p.Count < p.Limit {
-		//p.TotalPages = 1
+		p.TotalPages = 1
 	} else {
 		p.TotalPages = int(math.Ceil(float64(p.Count) / float64(p.Limit)))
 	}
