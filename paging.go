@@ -2,6 +2,7 @@ package paging
 
 import "math"
 
+// Paging defines fields for a pagination
 type Paging struct {
 	Page                int
 	Limit, DefaultLimit int
@@ -10,6 +11,8 @@ type Paging struct {
 	Count               int
 }
 
+// Calc produces a Paging calculated over
+// Page, Limit, Count and DefaultLimit values of given Paging
 func (p Paging) Calc() *Paging {
 	if p.Page < 1 {
 		p.Page = 1
