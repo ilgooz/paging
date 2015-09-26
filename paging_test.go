@@ -11,6 +11,7 @@ var cases = map[Paging][]int{
 	Paging{Page: 1, Limit: 10, Count: 19}: []int{10, 0, 1, 2},
 	Paging{Page: 3, Limit: 5, Count: 248}: []int{5, 10, 3, 50},
 	Paging{Page: 2, Limit: 1, Count: 100}: []int{1, 1, 2, 100},
+	Paging{Page: 6, Limit: 3, Count: 13}:  []int{3, 12, 5, 5},
 }
 
 func TestAll(t *testing.T) {
